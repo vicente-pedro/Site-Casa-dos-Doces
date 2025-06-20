@@ -4,23 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Casa dos Doces</title>
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="./css/reset.css" />
-  <link rel="stylesheet" href="./css/responsive.css" />
+  
+  <!-- Importação dos arquivos CSS -->
+  <link rel="stylesheet" href="./css/style.css" /> <!-- Estilo principal -->
+  <link rel="stylesheet" href="./css/reset.css" /> <!-- Reset de estilos padrão do navegador -->
+  <link rel="stylesheet" href="./css/responsive.css" /> <!-- Estilo para responsividade -->
+  
+  <!-- Importação de fontes do Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
 
 </head>
-<body>
+<body> <!-- Início do corpo da página -->
+  <!-- Cabeçalho -->  
   <header>
     <div class="logo-completa">
       <img src="./img/Logo.png" alt="Logo Casa dos Doces" />
       <span class="logo-texto topo">Casa</span>
       <span class="logo-texto base">dos Doces</span>
     </div>
+    
+    <!-- Menu de navegação -->
     <nav>
       <ul>
+        <!-- Cada item do menu tem um atributo data-section que ativa a navegação SPA via JavaScript -->
         <li><a href="#" class="nav-link active" data-section="inicio">Início</a></li>
         <li><a href="#" class="nav-link" data-section="galeria">Galeria</a></li>
         <li><a href="#" class="nav-link" data-section="clientes">Clientes</a></li>
@@ -29,7 +37,8 @@
       </ul>
     </nav>
   </header>
-
+  
+  <!-- Conteúdo principal -->
   <main>
 <!-- Início -->
     <section id="inicio" class="content-section active">
@@ -77,9 +86,9 @@
 
 <!-- Galeria -->
 <section id="galeria" class="content-section">
-  <div class="carousel-container">
-    <button class="carousel-btn left" id="prevBtn">&#10094;</button>
-    <div class="carousel-track">
+  <div class="carousel-container">  <!-- Container do carrossel -->
+    <button class="carousel-btn left" id="prevBtn">&#10094;</button> <!-- Botão para mover o carrossel para a esquerda -->
+    <div class="carousel-track"> <!-- Faixa que segura todos os slides do carrossel -->
       <div class="carousel-slide"><img src="./img/Ovo trufado de chocolate.jpg" alt="Ovo trufado de chocolate" />
         <p>OVO TRUFADO DE CHOCOLATE</p>
         <p>Ovo de Páscoa feito com chocolate ao leite e recheado com brigadeiro</p>
@@ -161,13 +170,13 @@
         <p>Bolo sabor chocolate com cobertura de chantilly e confetes de chocolate</p>
       </div>
     </div>
-    <button class="carousel-btn right" id="nextBtn">&#10095;</button>
+    <button class="carousel-btn right" id="nextBtn">&#10095;</button> <!-- Botão para mover o carrossel para a direita -->
   </div>
 </section>
 
 <!-- Clientes -->
    <section id="clientes" class="content-section">
-    <div class="avaliacao">
+    <div class="avaliacao">  <!-- Container dos cards de avaliação -->
             <div class="card">
         <div class="user">
           <img src="./img/Avatar Rodolfo Pito.png" alt="Rodolfo Pito">
@@ -209,7 +218,7 @@
 
 <!-- Sobre Nós -->
   <section id="sobre" class="content-section">
-  <div class="sobre-nos-container">
+  <div class="sobre-nos-container"> <!-- Container principal da seção -->
     <div class="imagem-texto">
       <img src="./img/Decorando Bolo.jpg" alt="Decorando bolo" />
       <div class="texto">
@@ -236,7 +245,9 @@
 
 <!-- Contato -->
  <section id="contato" class="content-section">
-  <div class="contato-container"> 
+  <div class="contato-container"> <!-- Container de contato -->
+    
+    <!-- Mapa incorporado do Google Maps -->
     <iframe 
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.4882785971415!2d-46.547123!3d-23.586321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5ce7eaaa00f3%3A0x9c5d7aa5f0fda11b!2sRua%20Primavera%2C%2099%20-%20Santa%20Libania%2C%20Bragan%C3%A7a%20Paulista%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1716400000000!5m2!1spt-BR!2sbr" 
       loading="lazy" 
@@ -251,6 +262,8 @@
       <p>
         Nos botões abaixo você nos encontra em sua rede social favorita. Também aceitamos pedidos via <strong>WhatsApp</strong> e <strong>E-mail</strong> com antecedência de 7 dias, a depender do tamanho do pedido.
       </p>
+
+      <!-- Ícones das redes sociais -->
       <div class="redes-sociais">
         <a href="#" target="_blank"><img src="./img/Instagram.png" alt="Instagram"></a>
         <a href="#" target="_blank"><img src="./img/WhatsApp.png" alt="WhatsApp"></a>
@@ -261,6 +274,6 @@
   </div>
 </section>
 </main>
-<script src="./js/sript.js"></script>
+<script src="./js/sript.js"></script> <!-- Link do JavaScript que controla as interações (menu, carrossel, etc.) -->
 </body>
 </html>
