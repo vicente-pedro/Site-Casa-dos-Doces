@@ -1,43 +1,47 @@
+/* ---------- Estilização Geral ---------- */
 html, body {
-  height: 100%;
+  height: 100%; /* Faz com que o body ocupe 100% da altura da tela */
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Remove barra de rolagem horizontal */
 }
 
 body {
-  background-color: #A9746F;
-  color: #3a2c29;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+  background-color: #A9746F; /* Cor de fundo principal */
+  color: #3a2c29;            /* Cor padrão dos textos */
+  font-family: Arial, sans-serif; /* Fonte padrão */
+  line-height: 1.6;               /* Espaçamento entre linhas */
 }
 
+/* ---------- Cabeçalho ---------- */
 header {
   background-color: #A9746F;
   padding: 20px 20px 5px;
-  display: flex;
-  justify-content: space-between;
+  display: flex;                      /* Layout flexível */
+  justify-content: space-between;     /* Espaço entre logo e menu */
   align-items: center;
-  flex-wrap: wrap;
-  border-bottom: 2px solid #D8F3DC;
+  flex-wrap: wrap;                    /* Quebra linhas se precisar */
+  border-bottom: 2px solid #D8F3DC;   /* Linha na parte inferior */
 }
 
+/* ---------- Controle de Seções ---------- */
 .content-section {
-  display: none;
+  display: none; /* Esconde as seções por padrão */
 }
 
 .content-section.active {
-  display: block;
+  display: block; /* Mostra apenas a seção ativa */
 }
 
-
+/* ---------- Logo ---------- */
 .logo-completa {
-  position: relative;
+  position: relative; /* Permite posicionar os textos sobre a imagem */
   width: 100px;
+  cursor: pointer;    /* Mostra o ponteiro indicando clique */
 }
 
 .logo-completa img {
-  width: 100%;
+  width: 100%;        /* Faz a imagem ocupar todo o espaço do container */
 }
 
 .logo-texto {
@@ -47,13 +51,21 @@ header {
   font-size: 18px;
 }
 
-.logo-texto.topo { top: -5px; left: 0; }
-.logo-texto.base { bottom: -5px; right: 0; }
+.logo-texto.topo {
+  top: -5px;
+  left: 0;
+}
 
+.logo-texto.base {
+  bottom: -5px;
+  right: 0;
+}
+
+/* ---------- Menu de Navegação ---------- */
 nav ul {
-  list-style: none;
-  display: flex;
-  gap: 15px;
+  list-style: none;  /* Remove os pontos da lista */
+  display: flex;     /* Organiza os itens lado a lado */
+  gap: 15px;         /* Espaço entre os itens */
   margin: 0;
   padding: 0;
 }
@@ -65,18 +77,21 @@ nav ul li a {
   font-size: 1rem;
   padding: 6px 10px;
   border-radius: 5px;
-  transition: 0.3s;
+  transition: 0.3s;  /* Suaviza transições de cor e fundo */
 }
 
+/* Link ativo (selecionado) */
 nav ul li a.active {
   background-color: #F8C8DC;
   color: #000;
 }
 
+/* ---------- Conteúdo Principal ---------- */
 main {
   padding: 20px;
 }
 
+/* ---------- Categorias ---------- */
 .categoria h2 {
   font-family: 'Playfair Display', serif;
   font-size: 1.5rem;
@@ -86,6 +101,7 @@ main {
   color: #D8F3DC;
 }
 
+/* ---------- Grid de Produtos ---------- */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -98,7 +114,7 @@ main {
 
 .item img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 10px; /* Bordas arredondadas */
 }
 
 .item p {
@@ -108,10 +124,7 @@ main {
   font-family: 'Pangolin', cursive;
 }
 
-.logo-completa {
-  cursor: pointer;
-}
-
+/* ---------- Galeria (Carrossel) ---------- */
 #galeria.content-section.active {
   height: 100vh;
   display: flex;
@@ -131,11 +144,11 @@ main {
 
 .carousel-track {
   display: flex;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease; /* Animação na transição */
 }
 
 .carousel-slide {
-  min-width: 100%;
+  min-width: 100%; /* Cada slide ocupa 100% da largura do carrossel */
   text-align: center;
   padding: 10px;
   box-sizing: border-box;
@@ -156,6 +169,7 @@ main {
   font-size: 1rem;
 }
 
+/* Botões do carrossel */
 .carousel-btn {
   position: absolute;
   top: 50%;
@@ -182,7 +196,7 @@ main {
   right: 10px;
 }
 
-
+/* ---------- Avaliações dos Clientes ---------- */
 .avaliacao {
   display: flex;
   flex-direction: column;
@@ -215,7 +229,7 @@ main {
   font-size: 1.2rem;
 }
 
-
+/* ---------- Sobre Nós ---------- */
 #sobre-nos.content-section.active {
   background-color: #f8c8dc;
   padding: 40px 20px;
@@ -264,6 +278,7 @@ main {
   color: #f3f3f3;
 }
 
+/* ---------- Contato ---------- */
 #contato.content-section.active {
   padding: 40px 20px;
   background-color: #A9746F;
@@ -314,5 +329,5 @@ main {
 }
 
 .redes-sociais a img:hover {
-  transform: scale(1.1);
+  transform: scale(1.1); /* Efeito de leve aumento ao passar o mouse */
 }
