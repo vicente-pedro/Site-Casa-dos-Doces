@@ -1,21 +1,29 @@
+/* 
+Aplica estas regras SOMENTE quando a largura da tela
+for de no máximo 768 pixels (dispositivos móveis e tablets).
+*/
 @media (max-width: 768px) {
+
+    /* Altera o cabeçalho para coluna (em vez de linha) */
     header {
-      flex-direction: column;
-      text-align: center;
+      flex-direction: column; /* Empilha os itens do header na vertical */
+      text-align: center;     /* Centraliza o texto e os itens */
     }
   
+    /* Ajusta o menu de navegação */
     nav ul {
-      justify-content: center;
-      flex-wrap: wrap;
+      justify-content: center; /* Centraliza os itens do menu */
+      flex-wrap: wrap;         /* Permite que os itens quebrem para a próxima linha, se necessário */
     }
   
+    /* Ajusta o grid dos produtos */
     .grid {
       grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      /* 
+      Faz o grid se reorganizar automaticamente:
+      - Cria o máximo possível de colunas que caibam na tela
+      - Cada coluna tem no mínimo 120px
+      - Se houver espaço, ela expande até preencher (1fr = fração do espaço disponível)
+      */
     }
-  }
-
-  @media (max-width: 600px) {
-    .logo-completa{
-      width: 25%;
-    }
-  }
+}
