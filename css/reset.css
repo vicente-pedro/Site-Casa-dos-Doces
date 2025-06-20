@@ -1,5 +1,12 @@
+/* 
+Seleciona todos os elementos da página.
+O seletor universal * aplica as regras a tudo: div, p, img, body, etc.
+*/
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0; /* Remove todas as margens padrão dos navegadores */
+  padding: 0; /* Remove todos os espaçamentos internos padrão */
+  box-sizing: border-box; /* Faz com que o tamanho total dos elementos inclua padding e borda,
+                              evitando que eles aumentem além do width/height definidos.
+                              Isso facilita muito o controle do layout. */
 }
